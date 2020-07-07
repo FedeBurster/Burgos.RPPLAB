@@ -1,0 +1,78 @@
+# depslib dependency file v1.0
+1594044231 source:c:\users\federico\desktop\burgossterling.pplab1\color.c
+	<stdio.h>
+	<stdlib.h>
+	"burgos.h"
+
+1593948351 source:c:\users\federico\desktop\burgossterling.pplab1\fecha.c
+
+1594157841 source:c:\users\federico\desktop\burgossterling.pplab1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"burgos.h"
+
+1594138673 source:c:\users\federico\desktop\burgossterling.pplab1\mascota.c
+	"burgos.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1594045037 source:c:\users\federico\desktop\burgossterling.pplab1\tipo.c
+	<stdio.h>
+	<stdlib.h>
+	"burgos.h"
+
+1593973466 source:c:\users\federico\desktop\burgossterling.pplab1\servicio.c
+	<stdio.h>
+	<stdlib.h>
+	"burgos.h"
+
+1594140704 source:c:\users\federico\desktop\burgossterling.pplab1\burgos.c
+	"burgos.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1594136424 c:\users\federico\desktop\burgossterling.pplab1\burgos.h
+	"tipo.h"
+	"color.h"
+	"mascota.h"
+	"servicio.h"
+	"trabajo.h"
+	"fecha.h"
+	"informes.h"
+	"cliente.h"
+
+1593964619 c:\users\federico\desktop\burgossterling.pplab1\tipo.h
+
+1593965143 c:\users\federico\desktop\burgossterling.pplab1\color.h
+
+1594138450 c:\users\federico\desktop\burgossterling.pplab1\mascota.h
+	"cliente.h"
+	"burgos.h"
+
+1593966942 c:\users\federico\desktop\burgossterling.pplab1\servicio.h
+
+1594139295 c:\users\federico\desktop\burgossterling.pplab1\trabajo.h
+	"fecha.h"
+
+1593950187 c:\users\federico\desktop\burgossterling.pplab1\fecha.h
+
+1594140737 source:c:\users\federico\desktop\burgossterling.pplab1\trabajo.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"burgos.h"
+
+1594157830 source:c:\users\federico\desktop\burgossterling.pplab1\informes.c
+	"burgos.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1594144413 c:\users\federico\desktop\burgossterling.pplab1\informes.h
+
+1594134512 source:c:\users\federico\desktop\burgossterling.pplab1\cliente.c
+
+1594134636 c:\users\federico\desktop\burgossterling.pplab1\cliente.h
+
