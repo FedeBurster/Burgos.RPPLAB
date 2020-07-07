@@ -92,6 +92,6 @@ int listarTrabajos(eTrabajo*trabajos,int length,eMascota*mascotas,eServicio*serv
             printf("%5d/%d/%d\n",trabajos[i].trabajoFecha.fechaDia,trabajos[i].trabajoFecha.fechaMes,trabajos[i].trabajoFecha.fechaAnio);
         }
     }
-    system("pause");
+
     return 1;
 }

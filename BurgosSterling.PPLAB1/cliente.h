@@ -6,4 +6,6 @@ struct {
     char clienteSexo;
     char clienteNombre[20];
 }typedef eCliente;
+
+int listarClientes(eCliente*clientes);
 #endif

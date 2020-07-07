@@ -20,7 +20,7 @@ int main()
         switch(opcion=mainMenu())
         {
             case 1:
-                altaMascota(&flagMascotasAlta,&flagMascotasId,mascotas,ARRAY_LENGTH);
+                altaMascota(&flagMascotasAlta,&flagMascotasId,mascotas,ARRAY_LENGTH,clientes);
                 break;
             case 2:
                 modificarMascota(flagMascotasAlta,mascotas,ARRAY_LENGTH,clientes);
@@ -49,6 +49,7 @@ int main()
                 break;
             case 9:
                 listarTrabajos(trabajos,ARRAY_LENGTH,mascotas,servicios);
+                system("pause");
                 break;
             case 10:
                 switch(opcionDos=subMenuInformes())
@@ -73,6 +74,15 @@ int main()
                         break;
                     case 7:
                         listarTrabajosPorMascota(trabajos,ARRAY_LENGTH,mascotas,tipos,colores,servicios,flagMascotasAlta,clientes);
+                        break;
+                    case 8:
+                        mostrarImporteMascota(flagMascotasAlta,flagTrabajoAlta,mascotas,ARRAY_LENGTH,clientes,trabajos);
+                        break;
+                    case 9:
+                        mostrarUnServicio(flagMascotasAlta,flagTrabajoAlta,mascotas,ARRAY_LENGTH,clientes,trabajos,servicios);
+                        break;
+                    case 10:
+                        mostrarServicioPorFecha(flagMascotasAlta,flagTrabajoAlta,mascotas,ARRAY_LENGTH,clientes,trabajos,servicios);
                         break;
                 }
                 break;

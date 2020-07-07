@@ -375,7 +375,7 @@ int listarTrabajosPorMascota(eTrabajo*trabajos,int length,eMascota*mascotas, eTi
 
 int mostrarImporteMascota(int flagAltaMascota,int flagAltaTrabajos,eMascota*mascotas,int length,eCliente*clientes,eTrabajo*trabajos)
 {
-    int i,auxId;
+    int i,auxId,importeTotal=0;
     if(flagAltaMascota==0 || flagAltaTrabajos==0)
     {
         printf("\nSe debe dar de alta al menos una instancia para acceder a esta opcion\n");
@@ -392,9 +392,121 @@ int mostrarImporteMascota(int flagAltaMascota,int flagAltaTrabajos,eMascota*masc
         {
             if(trabajos[i].trabajoIdServicio==20000)
             {
-
+                importeTotal=importeTotal+250;
+            }
+            if(trabajos[i].trabajoIdServicio==20001)
+            {
+                importeTotal=importeTotal+300;
+            }
+            if(trabajos[i].trabajoIdServicio==20002)
+            {
+                importeTotal=importeTotal+400;
             }
         }
     }
+    printf("\nEl importe total es $%d\n",importeTotal);
+    system("pause");
+    return 1;
+}
+
+int mostrarUnServicio(int flagAltaMascota,int flagAltaTrabajos,eMascota*mascotas,int length,eCliente*clientes,eTrabajo*trabajos,eServicio*servicios)
+{
+    if(flagAltaMascota==0 || flagAltaTrabajos==0)
+    {
+        printf("\nSe debe dar de alta al menos una instancia para acceder a esta opcion\n");
+        system("pause");
+        return 0;
+    }
+    int auxId,i,j,flag=0;
+    system("cls");
+
+    listarServicios(servicios);
+    printf("\nIngrese ID servicio: ");
+    scanf("%d",&auxId);
+    fflush(stdin);
+    // mostrar mascota y fecha
+    printf("\nID               NOMBRE   TIPO  COLOR EDAD DUENIO   FECHA");
+    for(i=0;i<length;i++)
+    {
+        if(auxId==trabajos[i].trabajoIdServicio)
+        {
+            for(j=0;j<length;j++)
+            {
+                if(trabajos[i].trabajoIdMascota==mascotas[j].mascotaId)
+                {
+                    listarMascota(mascotas,j,clientes);
+                    printf("%5d/%d/%d\n",trabajos[i].trabajoFecha.fechaDia,trabajos[i].trabajoFecha.fechaMes,trabajos[i].trabajoFecha.fechaAnio);
+                    flag=1;
+                }
+            }
+        }
+    }
+
+    if(flag==0)
+    {
+        system("cls");
+        printf("\nNo hay trabajos que listar\n");
+    }
+    system("pause");
+    return 1;
+}
+//10- Pedir una fecha y mostrar todos los servicios realizados en la misma.
+int mostrarServicioPorFecha(int flagAltaMascota,int flagAltaTrabajos,eMascota*mascotas,int length,eCliente*clientes,eTrabajo*trabajos,eServicio*servicios)
+{
+    if(flagAltaMascota==0 || flagAltaTrabajos==0)
+    {
+        printf("\nSe debe dar de alta al menos una instancia para acceder a esta opcion\n");
+        system("pause");
+        return 0;
+    }
+    int auxDia,auxMes,auxAnio,i,j,flag=0;
+    system("cls");
+
+    listarTrabajos(trabajos,length,mascotas,servicios);
+    printf("\nIngrese dia: ");
+    scanf("%d",&auxDia);
+    fflush(stdin);
+    printf("\nIngrese mes: ");
+    scanf("%d",&auxMes);
+    fflush(stdin);
+    printf("\nIngrese anio: ");
+    scanf("%d",&auxAnio);
+    fflush(stdin);
+    for(i=0;i<length;i++)
+    {
+        if(trabajos[i].trabajoFecha.fechaAnio==auxAnio && trabajos[i].trabajoFecha.fechaMes==auxMes && trabajos[i].trabajoFecha.fechaDia==auxDia)
+        {
+             if(trabajos[i].trabajoId!=-1)
+            {
+                if(flag==0)
+                {
+                    system("cls");
+                    printf("  ID   | MASCOTA |   SERVICIO   | FECHA");
+                    flag=1;
+                }
+                printf("\n%5d",trabajos[i].trabajoId);
+                for(j=0;j<length;j++)
+                {
+                    if(trabajos[i].trabajoIdMascota==mascotas[j].mascotaId)
+                    {
+                        printf("%10s",mascotas[j].mascotaNombre);
+                    }
+                }
+                for(j=0;j<3;j++)
+                {
+                    if(trabajos[i].trabajoIdServicio==servicios[j].servicioId)
+                    {
+                        printf("%15s",servicios[j].servicioDescripcion);
+                    }
+                }
+                printf("%5d/%d/%d\n",trabajos[i].trabajoFecha.fechaDia,trabajos[i].trabajoFecha.fechaMes,trabajos[i].trabajoFecha.fechaAnio);
+            }
+        }
+    }
+    if(flag==0)
+    {
+        printf("\nNo hay trabajos que listar\n");
+    }
+    system("pause");
     return 1;
 }

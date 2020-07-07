@@ -6,12 +6,12 @@
 
 1593948351 source:c:\users\federico\desktop\burgossterling.pplab1\fecha.c
 
-1594157841 source:c:\users\federico\desktop\burgossterling.pplab1\main.c
+1594164946 source:c:\users\federico\desktop\burgossterling.pplab1\main.c
 	<stdio.h>
 	<stdlib.h>
 	"burgos.h"
 
-1594138673 source:c:\users\federico\desktop\burgossterling.pplab1\mascota.c
+1594165534 source:c:\users\federico\desktop\burgossterling.pplab1\mascota.c
 	"burgos.h"
 	<string.h>
 	<stdio.h>
@@ -22,7 +22,7 @@
 	<stdlib.h>
 	"burgos.h"
 
-1593973466 source:c:\users\federico\desktop\burgossterling.pplab1\servicio.c
+1594160174 source:c:\users\federico\desktop\burgossterling.pplab1\servicio.c
 	<stdio.h>
 	<stdlib.h>
 	"burgos.h"
@@ -47,7 +47,7 @@
 
 1593965143 c:\users\federico\desktop\burgossterling.pplab1\color.h
 
-1594138450 c:\users\federico\desktop\burgossterling.pplab1\mascota.h
+1594164940 c:\users\federico\desktop\burgossterling.pplab1\mascota.h
 	"cliente.h"
 	"burgos.h"
 
@@ -58,21 +58,24 @@
 
 1593950187 c:\users\federico\desktop\burgossterling.pplab1\fecha.h
 
-1594140737 source:c:\users\federico\desktop\burgossterling.pplab1\trabajo.c
+1594164502 source:c:\users\federico\desktop\burgossterling.pplab1\trabajo.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 	"burgos.h"
 
-1594157830 source:c:\users\federico\desktop\burgossterling.pplab1\informes.c
+1594164837 source:c:\users\federico\desktop\burgossterling.pplab1\informes.c
 	"burgos.h"
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
 
-1594144413 c:\users\federico\desktop\burgossterling.pplab1\informes.h
+1594163749 c:\users\federico\desktop\burgossterling.pplab1\informes.h
 
-1594134512 source:c:\users\federico\desktop\burgossterling.pplab1\cliente.c
+1594165718 source:c:\users\federico\desktop\burgossterling.pplab1\cliente.c
+	"burgos.h"
+	<stdio.h>
+	<stdlib.h>
 
-1594134636 c:\users\federico\desktop\burgossterling.pplab1\cliente.h
+1594165269 c:\users\federico\desktop\burgossterling.pplab1\cliente.h
 

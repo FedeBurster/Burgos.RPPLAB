@@ -11,7 +11,7 @@ struct {
     int mascotaIdCliente;
 }typedef eMascota;
 
-int altaMascota(int*flagAlta,int*flagId,eMascota *mascotas,int length);
+int altaMascota(int*flagAlta,int*flagId,eMascota *mascotas,int length,eCliente*clientes);
 
 int listarMascotas(int flagAlta,eMascota *mascotas,int length,eCliente*clientes);
 int listarMascota(eMascota *mascotas,int index,eCliente*clientes);

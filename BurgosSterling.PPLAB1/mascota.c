@@ -3,9 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int altaMascota(int *flagAlta,int*flagId,eMascota *mascotas,int length)
+int altaMascota(int *flagAlta,int*flagId,eMascota *mascotas,int length,eCliente*clientes)
 {
-    int i;
+    int i,flag=0,auxInt,j;
     char auxString[20];
     for(i=0;i<length;i++)
     {
@@ -52,6 +52,25 @@ int altaMascota(int *flagAlta,int*flagId,eMascota *mascotas,int length)
                 }while(validarStringInt(auxString)==0);
             }
             mascotas[i].mascotaEdad=atoi(auxString);
+            /////////////ID CLIENTE
+            do{
+                listarClientes(clientes);
+                printf("\nIngrese ID del cliente: ");
+                scanf("%d",&auxInt);
+                fflush(stdin);
+                for(j=0;j<5;j++)
+                {
+                    if(clientes[j].clienteId==auxInt)
+                    {
+                        flag=1;
+                    }
+                }
+                if(flag==0)
+                {
+                    printf("\nError, cliente inexistente\n");
+                }
+            }while(flag==0);
+            mascotas[i].mascotaIdCliente=auxInt;
             ////ID MASCOTA
             *flagAlta=*flagAlta+1;
             *flagId=*flagId+1;
@@ -160,7 +179,7 @@ int modificarMascota(int flagAlta,eMascota *mascotas,int length,eCliente*cliente
         if(auxInt==mascotas[i].mascotaId && auxInt!=-1)
         {
             system("cls");
-            printf("ID               NOMBRE   TIPO  COLOR EDAD DUEÑO");
+            printf("ID               NOMBRE   TIPO  COLOR EDAD DUENIO");
             listarMascota(mascotas,i,clientes);
             printf("\n\n1)Modificar tipo\n2)Modificar edad\nIngrese el campo que desea modificar: ");
             scanf("%d",&auxInt);

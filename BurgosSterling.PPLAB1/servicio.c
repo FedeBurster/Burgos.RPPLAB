@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "burgos.h"
 
-int listarServicios(eServicio *servicios)
+int listarServicios(eServicio*servicios)
 {
     int i;
     printf("\n  ID               DESCRIPCION PRECIO\n");

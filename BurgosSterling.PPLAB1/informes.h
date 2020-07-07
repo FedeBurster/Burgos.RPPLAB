@@ -9,8 +9,9 @@ int contarColorTipo(eColor*colores,eTipo*tipos,eMascota*mascotas,int length,int 
 int mostrarColorMasMascotas(eMascota*mascotas,eColor*colores,int length,int flagAlta);
 int subMenuInformes();
 int listarTrabajosPorMascota(eTrabajo*trabajos,int length,eMascota*mascotas, eTipo*tiposMascota, eColor*coloresMasc, eServicio*servicios,int flagAlta,eCliente*clientes);
-
-
+int mostrarImporteMascota(int flagAltaMascota,int flagAltaTrabajos,eMascota*mascotas,int length,eCliente*clientes,eTrabajo*trabajos);
+int mostrarUnServicio(int flagAltaMascota,int flagAltaTrabajos,eMascota*mascotas,int length,eCliente*clientes,eTrabajo*trabajos,eServicio*servicios);
+int mostrarServicioPorFecha(int flagAltaMascota,int flagAltaTrabajos,eMascota*mascotas,int length,eCliente*clientes,eTrabajo*trabajos,eServicio*servicios);
 
 
 #endif
