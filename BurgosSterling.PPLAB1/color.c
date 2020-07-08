@@ -2,6 +2,14 @@
 #include <stdlib.h>
 #include "burgos.h"
 
+
+/** \brief muestra todos los colores
+ *
+ * \param *colores eColor array de estructuras eColor
+ * \param length int longitud del array
+ * \return 1
+ *
+ */
 int listarColores(eColor *colores,int length)
 {
     int i;

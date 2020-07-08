@@ -3,6 +3,19 @@
 #include <time.h>
 #include "burgos.h"
 
+/** \brief Carga en el sistema los datos en una estructura eTrabajo
+ *
+ * \param flagMascotas int señala el alta en estructuras eMascota
+ * \param *flagAlta int direccion de memoria a bandera alta
+ * \param *flagId int direccion de memoria a la bandera id
+ * \param *mascotas eMascota array de estructuras eMascota
+ * \param *servicios eServicio array de estructuras eServicio
+ * \param *trabajos eTrabajo array de estructuras eTrabajo
+ * \param mascotaLenght int longitud del array mascotas
+ * \param *clientes eCliente array de estructuras eCliente
+ * \return Devuelve 0 si no se completa el alta, 1 si se completa
+ *
+ */
 int altaTrabajo(int flagMascotas,int*flagAlta,int*flagId,eMascota*mascotas,eServicio*servicios,eTrabajo*trabajos,int mascotaLength,eCliente*clientes)
 {
     if(flagMascotas==0)
@@ -51,7 +64,7 @@ int altaTrabajo(int flagMascotas,int*flagAlta,int*flagId,eMascota*mascotas,eServ
                             printf("%d/%d/%d\n",trabajos[k].trabajoFecha.fechaDia,trabajos[k].trabajoFecha.fechaMes,trabajos[k].trabajoFecha.fechaAnio);
                             printf("Se cargo el trabajo con exito.\n");
                             system("pause");
-                            return 0;
+                            return 1;
                         }
                     }
                 }
@@ -66,6 +79,15 @@ int altaTrabajo(int flagMascotas,int*flagAlta,int*flagId,eMascota*mascotas,eServ
     return 0;
 }
 
+/** \brief Lista todas las instancias cargadas de trabajo
+ *
+ * \param *trabajos eTrabajo array de estructuras eTrabajo
+ * \param length int longitud de array
+ * \param *mascotas eMascota array de estructuras eMascota
+ * \param *servicios eServicio array de estructuras eServicio
+ * \return 1
+ *
+ */
 int listarTrabajos(eTrabajo*trabajos,int length,eMascota*mascotas,eServicio*servicios)
 {
     int i,j;
@@ -92,6 +114,5 @@ int listarTrabajos(eTrabajo*trabajos,int length,eMascota*mascotas,eServicio*serv
             printf("%5d/%d/%d\n",trabajos[i].trabajoFecha.fechaDia,trabajos[i].trabajoFecha.fechaMes,trabajos[i].trabajoFecha.fechaAnio);
         }
     }
-
     return 1;
 }

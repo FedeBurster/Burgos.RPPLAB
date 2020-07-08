@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include "burgos.h"
 
+/** \brief lista todas las instancias de servicio
+ *
+ * \param *servicios eServicio array de estructura eServicio
+ * \return 1
+ *
+ */
 int listarServicios(eServicio*servicios)
 {
     int i;

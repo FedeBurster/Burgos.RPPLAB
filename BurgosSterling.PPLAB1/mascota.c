@@ -3,6 +3,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/** \brief
+ *
+ * \param *flagAlta int direccion de memoria a bandera alta
+ * \param *flagId int direccion de memoria a la bandera id
+ * \param *mascotas eMascota array de estructuras eMascota
+ * \param length int longitud de array
+ * \param *clientes eCliente array de estructuras eCliente
+ * \return 1 si el alta completa con exito, 0 de lo contrario
+ *
+ */
 int altaMascota(int *flagAlta,int*flagId,eMascota *mascotas,int length,eCliente*clientes)
 {
     int i,flag=0,auxInt,j;
@@ -78,12 +88,20 @@ int altaMascota(int *flagAlta,int*flagId,eMascota *mascotas,int length,eCliente*
             printf("\nSe asigno el ID %d",mascotas[i].mascotaId);
             printf("\nAlta terminado correctamente\n");
             system("pause");
-            return 0;
+            return 1;
         }
     }
-    return 1;
+    return 0;
 }
-
+/** \brief muestra todos los datos del array eMascota
+ *
+ * \param flagAlta int bandera alta
+ * \param *mascotas eMascota array de estructuras eMascota
+ * \param length int longitud de array
+ * \param *clientes eCliente array de estructuras eCliente
+ * \return 1
+ *
+ */
 int listarMascotas(int flagAlta,eMascota *mascotas,int length,eCliente*clientes)
 {
     int i;
@@ -105,6 +123,14 @@ int listarMascotas(int flagAlta,eMascota *mascotas,int length,eCliente*clientes)
     return 1;
 }
 
+/** \brief muestra una estructura eMascota
+ *
+ * \param *mascotas eMascota array de estructuras eMascota
+ * \param index int indice
+ * \param *clientes eCliente array de estructuras eCliente
+ * \return 1
+ *
+ */
 int listarMascota(eMascota *mascotas,int index,eCliente*clientes)
 {
     int i;
@@ -161,7 +187,14 @@ int listarMascota(eMascota *mascotas,int index,eCliente*clientes)
     return 1;
 }
 
-
+/** \brief permite modificar tipo y edad de una mascota
+ *
+ * \param flagAlta int bandera alta
+ * \param *mascotas eMascota array de estructuras eMascota
+ * \param *clientes eCliente array de estructuras eCliente
+ * \return 1 si los cambios se completan con exito, 0 de lo contrario
+ *
+ */
 int modificarMascota(int flagAlta,eMascota *mascotas,int length,eCliente*clientes)
 {
     int i,auxInt;
@@ -226,6 +259,15 @@ int modificarMascota(int flagAlta,eMascota *mascotas,int length,eCliente*cliente
     return 0;
 }
 
+/** \brief da de baja una estructura mascota
+ *
+ * \param *flagAlta int direccion de memoria a bandera alta
+ * \param *mascotas eMascota array de estructuras eMascota
+ * \param length int longitud del array
+ * \param *clientes eCliente array de estructuras eCliente
+ * \return 1 si se baja con exito, 0 de lo contrario
+ *
+ */
 int bajaMascota(int*flagAlta,eMascota*mascotas,int length,eCliente*clientes)
 {
     listarMascotas(*flagAlta,mascotas,length,clientes);
@@ -248,7 +290,7 @@ int bajaMascota(int*flagAlta,eMascota*mascotas,int length,eCliente*clientes)
             *flagAlta=*flagAlta-1;
             printf("\n\nLa mascota fue dada de baja con exito\n");
             system("pause");
-            return 0;
+            return 1;
         }
     }
     printf("\nEl ID ingresado no corresponde\n");

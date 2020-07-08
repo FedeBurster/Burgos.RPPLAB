@@ -1,33 +1,33 @@
 # depslib dependency file v1.0
-1594044231 source:c:\users\federico\desktop\burgossterling.pplab1\color.c
+1594169765 source:c:\users\federico\desktop\burgossterling.pplab1\color.c
 	<stdio.h>
 	<stdlib.h>
 	"burgos.h"
 
 1593948351 source:c:\users\federico\desktop\burgossterling.pplab1\fecha.c
 
-1594164946 source:c:\users\federico\desktop\burgossterling.pplab1\main.c
+1594168595 source:c:\users\federico\desktop\burgossterling.pplab1\main.c
 	<stdio.h>
 	<stdlib.h>
 	"burgos.h"
 
-1594165534 source:c:\users\federico\desktop\burgossterling.pplab1\mascota.c
+1594167519 source:c:\users\federico\desktop\burgossterling.pplab1\mascota.c
 	"burgos.h"
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
 
-1594045037 source:c:\users\federico\desktop\burgossterling.pplab1\tipo.c
+1594166748 source:c:\users\federico\desktop\burgossterling.pplab1\tipo.c
 	<stdio.h>
 	<stdlib.h>
 	"burgos.h"
 
-1594160174 source:c:\users\federico\desktop\burgossterling.pplab1\servicio.c
+1594166789 source:c:\users\federico\desktop\burgossterling.pplab1\servicio.c
 	<stdio.h>
 	<stdlib.h>
 	"burgos.h"
 
-1594140704 source:c:\users\federico\desktop\burgossterling.pplab1\burgos.c
+1594171843 source:c:\users\federico\desktop\burgossterling.pplab1\burgos.c
 	"burgos.h"
 	<string.h>
 	<stdio.h>
@@ -58,21 +58,21 @@
 
 1593950187 c:\users\federico\desktop\burgossterling.pplab1\fecha.h
 
-1594164502 source:c:\users\federico\desktop\burgossterling.pplab1\trabajo.c
+1594167921 source:c:\users\federico\desktop\burgossterling.pplab1\trabajo.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 	"burgos.h"
 
-1594164837 source:c:\users\federico\desktop\burgossterling.pplab1\informes.c
+1594169711 source:c:\users\federico\desktop\burgossterling.pplab1\informes.c
 	"burgos.h"
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
 
-1594163749 c:\users\federico\desktop\burgossterling.pplab1\informes.h
+1594168586 c:\users\federico\desktop\burgossterling.pplab1\informes.h
 
-1594165718 source:c:\users\federico\desktop\burgossterling.pplab1\cliente.c
+1594169797 source:c:\users\federico\desktop\burgossterling.pplab1\cliente.c
 	"burgos.h"
 	<stdio.h>
 	<stdlib.h>

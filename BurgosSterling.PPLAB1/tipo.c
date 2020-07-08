@@ -2,6 +2,14 @@
 #include <stdlib.h>
 #include "burgos.h"
 
+
+/** \brief lista todas las instancias de tipo
+ *
+ * \param *tipos eTipo array de estructuras eTipo
+ * \param length int longitud del array
+ * \return 1
+ *
+ */
 int listarTipos(eTipo *tipos,int length)
 {
     int i;

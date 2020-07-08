@@ -3,6 +3,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/** \brief muestra las opciones disponibles en informes
+ *
+ * \return int opcion
+ *
+ */
 int subMenuInformes()
 {
     int opcion;
@@ -19,6 +24,15 @@ int subMenuInformes()
     return opcion;
 }
 
+/** \brief Mostrar las mascotas del color seleccionado por el usuario.
+ *
+ * \param *mascotas eMascota array de estructuras eMascota
+ * \param *colores eColor array de estructuras eColor
+ * \param length int longitud del array
+ * \param *clientes eCliente array de estructuras eCliente
+ * \return 1
+ *
+ */
 int mostrarMascotasPorColor(eMascota*mascotas,eColor*colores,int length,eCliente*clientes)
 {
     int auxInt,i,flag=0;
@@ -46,6 +60,15 @@ int mostrarMascotasPorColor(eMascota*mascotas,eColor*colores,int length,eCliente
     return 1;
 }
 
+/** \brief Mostrar mascotas de un tipo seleccionado.
+ *
+ * \param *mascotas eMascota array de estructuras eMascota
+ * \param *tipos eTipo array de estructuras eTipo
+ * \param length int longitud del array
+ * \param *clientes eCliente array de estructuras eCliente
+ * \return 1
+ *
+ */
 int mostrarMascotasPorTipo(eMascota*mascotas,eTipo*tipos,int length,eCliente*clientes)
 {
     int auxInt,i,flag=0;
@@ -73,6 +96,15 @@ int mostrarMascotasPorTipo(eMascota*mascotas,eTipo*tipos,int length,eCliente*cli
     return 1;
 }
 
+
+/** \brief Informar la o las mascotas de menor edad.
+ *
+ * \param *mascotas eMascota array de estructuras eMascota
+ * \param length int longitud del array
+ * \param *clientes eCliente array de estructuras eCliente
+ * \return Devuelve 0 si no se completa, 1 si se completa
+ *
+ */
 int informarMascotaMenorEdad(eMascota*mascotas,int length,eCliente*clientes)
 {
     int i,auxIntMenor=30000,flag=0;
@@ -103,6 +135,16 @@ int informarMascotaMenorEdad(eMascota*mascotas,int length,eCliente*clientes)
     return 1;
 }
 
+
+/** \brief Listar de las mascotas separadas por tipo.
+ *
+ * \param *mascotas eMascota array de estructuras eMascota
+ * \param length int longitud del array
+ * \param flagAlta int bandera alta
+ * \param *clientes eCliente array de estructuras eCliente
+ * \return Devuelve 0 si no se completa, 1 si se completa
+ *
+ */
 int listarSeparadasTipo(eMascota*mascotas,int length,int flagAlta,eCliente*clientes)
 {
     int i,auxFlag=0;
@@ -200,6 +242,17 @@ int listarSeparadasTipo(eMascota*mascotas,int length,int flagAlta,eCliente*clien
     return 1;
 }
 
+
+/** \brief Elegir un color y un tipo y contar cuantas mascotas hay de ese color y ese tipo.
+ *
+ * \param *colores eColor array de estructuras eColor
+ * \param *tipos eTipo array de estructuras eTipo
+ * \param *mascotas eMascota array de estructuras eMascota
+ * \param length int longitud del array
+ * \param flagAlta int bandera alta
+ * \return Devuelve 0 si no se completa, 1 si se completa
+ *
+ */
 int contarColorTipo(eColor*colores,eTipo*tipos,eMascota*mascotas,int length,int flagAlta)
 {
     if(flagAlta==0)
@@ -260,6 +313,15 @@ int contarColorTipo(eColor*colores,eTipo*tipos,eMascota*mascotas,int length,int 
     return 1;
 }
 
+/** \brief Mostrar el o los colores con mas cantidad de mascotas
+ *
+ * \param *mascotas eMascota array de estructuras eMascota
+ * \param *colores eColor array de estructuras eColor
+ * \param length int longitud del array
+ * \param flagAlta int bandera alta
+ * \return Devuelve 0 si no se completa, 1 si se completa
+ *
+ */
 int mostrarColorMasMascotas(eMascota*mascotas,eColor*colores,int length,int flagAlta)
 {
     if(flagAlta==0)
@@ -319,7 +381,19 @@ int mostrarColorMasMascotas(eMascota*mascotas,eColor*colores,int length,int flag
     return 1;
 }
 
-int listarTrabajosPorMascota(eTrabajo*trabajos,int length,eMascota*mascotas, eTipo*tiposMascota, eColor*coloresMasc, eServicio*servicios,int flagAlta,eCliente*clientes)
+
+/** \brief Pedir una mascota y mostrar todos los trabajos que se le hicieron a la misma.
+ *
+ * \param *trabajos eTrabajo array de estructuras eTrabajo
+ * \param length int longitud del array
+ * \param *mascotas eMascota array de estructuras eMascota
+ * \param *servicios eServicio array de estructuras eServicio
+ * \param flagAlta int bandera alta
+ * \param *clientes eCliente array de estructuras eCliente
+ * \return Devuelve 0 si no se completa, 1 si se completa
+ *
+ */
+int listarTrabajosPorMascota(eTrabajo*trabajos,int length,eMascota*mascotas, eServicio*servicios,int flagAlta,eCliente*clientes)
 {
 
     if(flagAlta==0)
@@ -373,6 +447,17 @@ int listarTrabajosPorMascota(eTrabajo*trabajos,int length,eMascota*mascotas, eTi
     return 0;
 }
 
+/** \brief Pedir una mascota e informar la suma de los importes de los servicios que se le hicieron a la misma.
+ *
+ * \param flagAltaMascota int badera alta mascota
+ * \param flagAltaTrabjos int bandera alta trabajos
+ * \param *mascotas eMascota array de estructuras eMascota
+ * \param length int longitud del array
+ * \param *clientes eCliente array de estructuras eCliente
+ * \param *trabajos eTrabajo array de estructuras eTrabajo
+ * \return Devuelve 0 si no se completa, 1 si se completa
+ *
+ */
 int mostrarImporteMascota(int flagAltaMascota,int flagAltaTrabajos,eMascota*mascotas,int length,eCliente*clientes,eTrabajo*trabajos)
 {
     int i,auxId,importeTotal=0;
@@ -409,6 +494,18 @@ int mostrarImporteMascota(int flagAltaMascota,int flagAltaTrabajos,eMascota*masc
     return 1;
 }
 
+/** \brief Pedir un servicio y mostrar las mascotas a las que se les realizo ese servicio y la fecha.
+ *
+ * \param flagAltaMascota int badera alta mascota
+ * \param flagAltaTrabjos int bandera alta trabajos
+ * \param *mascotas eMascota array de estructuras eMascota
+ * \param length int longitud del array
+ * \param *clientes eCliente array de estructuras eCliente
+ * \param *trabajos eTrabajo array de estructuras eTrabajo
+ * \param *servicios eServicio array de estructuras eServicio
+ * \return Devuelve 0 si no se completa, 1 si se completa
+ *
+ */
 int mostrarUnServicio(int flagAltaMascota,int flagAltaTrabajos,eMascota*mascotas,int length,eCliente*clientes,eTrabajo*trabajos,eServicio*servicios)
 {
     if(flagAltaMascota==0 || flagAltaTrabajos==0)
@@ -450,7 +547,20 @@ int mostrarUnServicio(int flagAltaMascota,int flagAltaTrabajos,eMascota*mascotas
     system("pause");
     return 1;
 }
-//10- Pedir una fecha y mostrar todos los servicios realizados en la misma.
+
+
+/** \brief Pedir una fecha y mostrar todos los servicios realizados en la misma.
+ *
+ * \param flagAltaMascota int badera alta mascota
+ * \param flagAltaTrabjos int bandera alta trabajos
+ * \param *mascotas eMascota array de estructuras eMascota
+ * \param length int longitud del array
+ * \param *clientes eCliente array de estructuras eCliente
+ * \param *trabajos eTrabajo array de estructuras eTrabajo
+ * \param *servicios eServicio array de estructuras eServicio
+ * \return Devuelve 0 si no se completa, 1 si se completa
+ *
+ */
 int mostrarServicioPorFecha(int flagAltaMascota,int flagAltaTrabajos,eMascota*mascotas,int length,eCliente*clientes,eTrabajo*trabajos,eServicio*servicios)
 {
     if(flagAltaMascota==0 || flagAltaTrabajos==0)

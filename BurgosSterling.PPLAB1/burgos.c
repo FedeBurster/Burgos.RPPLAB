@@ -3,6 +3,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+/** \brief muestra el menu principal y deja al usuario elegir una opcion
+ *
+ * \return int opcion
+ *
+ */
 int mainMenu()
 {
     int opcion=-1;
@@ -15,6 +21,16 @@ int mainMenu()
     return opcion;
 }
 
+/** \brief Carga ejemplos en las estructuras eCliente, eMascota y eTrabajo
+ *
+ * \param *clientes eCliente array de estructuras eCliente
+ * \param *mascotas eMascota array de estructuras eMascota
+ * \param *trabajos eTrabajo array de estructuras eTrabajo
+ * \param flagAltaMascota int badera alta mascota
+ * \param flagAltaTrabjos int bandera alta trabajos
+ * \return 1
+ *
+ */
 int hardCodeoEjemplos(eCliente*clientes,eMascota*mascotas,eTrabajo*trabajos,int*flagAltaMascotas,int*flagAltaTrabajos)
 {
     clientes[0].clienteId=3000;
@@ -112,6 +128,14 @@ int hardCodeoEjemplos(eCliente*clientes,eMascota*mascotas,eTrabajo*trabajos,int*
     return 1;
 }
 
+/** \brief Carga los datos en las estructuras eTipo, eColor y eServicio
+ *
+ * \param *tipos eTipo array de estructuras eTipo
+ * \param *colores eColor array de estructuras eColor
+ * \param *servicios eServicio array de estructuras eServicio
+ * \return 1
+ *
+ */
 int hardcodeoTiposColoresServicio(eTipo *tipos,eColor *colores,eServicio *servicios)
 {
     tipos[0].tipoId=1000;
@@ -147,6 +171,14 @@ int hardcodeoTiposColoresServicio(eTipo *tipos,eColor *colores,eServicio *servic
     return 1;
 }
 
+/** \brief Marca con -1 señalizando que esta vacio
+ *
+ * \param *trabajos eTrabajo array de estructuras eTrabajo
+ * \param *mascotas eMascota array de estructuras eMascota
+ * \param length int longitud del array
+ * \return 1
+ *
+ */
 int inicializarArrays(eTrabajo*trabajos,eMascota*mascotas,int length)
 {
     int i;
@@ -198,6 +230,12 @@ int validateString(char* message, char* messageError, int maxLengthString, char*
     return okay;
 }
 
+/** \brief verifica si la cadena es un valor valido
+ *
+ * \param stringInt[] char cadena de caracteres
+ * \return 1 si es un valor valido, 0 si no lo es
+ *
+ */
 int validarStringIdColor(char stringInt[])
 {
     if(stringInt[0] < '1' || stringInt[0] > '5')
@@ -209,6 +247,12 @@ int validarStringIdColor(char stringInt[])
     return 1;
 }
 
+/** \brief verifica si la cadena es un valor valido
+ *
+ * \param stringInt[] char cadena de caracteres
+ * \return 1 si es un valor valido, 0 si no lo es
+ *
+ */
 int validarStringInt(char stringInt[])
 {
     int i=0;
@@ -222,17 +266,26 @@ int validarStringInt(char stringInt[])
     return 1;
 }
 
+/** \brief verifica si la cadena es un valor valido
+ *
+ * \param message[] char mensaje
+ * \param messageError[] char mensaje de error
+ * \param limiteMin int valor minimo valido
+ * \param limiteMax int valor maximo valido
+ * \return int numero
+ *
+ */
 int getInt(char message[], char messageError[], int limiteMin, int limiteMax)
 {
-    int numero1;
+    int numero;
 
     printf("%s", message);
-    scanf("%d", &numero1);
-    while(numero1 < limiteMin || numero1 > limiteMax)
+    scanf("%d", &numero);
+    while(numero < limiteMin || numero > limiteMax)
     {
         printf("%s", messageError);
-        scanf("%d", &numero1);
+        scanf("%d", &numero);
     }
 
-    return numero1;
+    return numero;
 }

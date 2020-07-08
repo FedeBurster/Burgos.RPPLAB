@@ -73,7 +73,7 @@ int main()
                         mostrarColorMasMascotas(mascotas,colores,ARRAY_LENGTH,flagMascotasAlta);
                         break;
                     case 7:
-                        listarTrabajosPorMascota(trabajos,ARRAY_LENGTH,mascotas,tipos,colores,servicios,flagMascotasAlta,clientes);
+                        listarTrabajosPorMascota(trabajos,ARRAY_LENGTH,mascotas,servicios,flagMascotasAlta,clientes);
                         break;
                     case 8:
                         mostrarImporteMascota(flagMascotasAlta,flagTrabajoAlta,mascotas,ARRAY_LENGTH,clientes,trabajos);
